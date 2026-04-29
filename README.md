@@ -75,7 +75,7 @@ See [`statistical_modelling/README.md`](statistical_modelling/README.md) for the
 ├── pyproject.toml                  # Project metadata and dependencies
 ├── data/
 │   └── responses.jsonl             # A/B test response data
-│   └── data-croissant.jsonld       # Croissant metadata file
+│   └── croissant_data.json         # Croissant metadata file
 ├── benchmark/                      # Amortized SHAP explainer training and evaluation
 ├── ui/dashboard/                   # Streamlit A/B testing dashboard
 └── statistical_modelling/          # Regression analysis of user study results
