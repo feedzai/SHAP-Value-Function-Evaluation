@@ -10,10 +10,8 @@ import seaborn as sns
 # =============================================================================
 
 # Load data
-root_folder = Path(__file__).parent.parent.parent
-data = pd.read_parquet(root_folder / "data" / "responses.parquet").reset_index(
-    drop=True
-)
+results_folder = Path(__file__).parent.parent / "results"
+data = pd.read_parquet(results_folder / "responses.parquet").reset_index(drop=True)
 
 # Dependant Variables
 data_dependant = data[["confidence"]].copy()
@@ -71,7 +69,7 @@ data_mixed = data[["user"]]
 # BASIC SUMMARIES AND PLOTS
 # =============================================================================
 # Create plots directory if it doesn't exist
-eda_plots_folder = root_folder / "statistical_modelling" / "plots" / "eda"
+eda_plots_folder = Path(__file__).parent.parent / "plots" / "eda"
 os.makedirs(eda_plots_folder, exist_ok=True)
 
 # For categorical control variables

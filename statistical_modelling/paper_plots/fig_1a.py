@@ -13,9 +13,11 @@ for font in fm.findSystemFonts(fontpaths=FONT_DIR):
 plt.rcParams["font.family"] = "CMU Serif"
 plt.rcParams["axes.unicode_minus"] = False
 
-data_folder = Path(__file__).parent.parent.parent / "data"
-metric_rankings = pd.read_parquet(data_folder / "all_metrics_rankings.parquet")
-metric_values = pd.read_parquet(data_folder / "all_metrics_aggregated_values.parquet")
+results_folder = Path(__file__).parent.parent / "results"
+metric_rankings = pd.read_parquet(results_folder / "all_metrics_rankings.parquet")
+metric_values = pd.read_parquet(
+    results_folder / "all_metrics_aggregated_values.parquet"
+)
 
 value_functions = metric_rankings.index.tolist()
 ft = 16

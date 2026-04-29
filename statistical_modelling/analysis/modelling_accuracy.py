@@ -71,10 +71,8 @@ import statsmodels.api as sm
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 # Load data
-root_folder = Path(__file__).parent.parent.parent
-data = pd.read_parquet(root_folder / "data" / "responses.parquet").reset_index(
-    drop=True
-)
+results_folder = Path(__file__).parent.parent / "results"
+data = pd.read_parquet(results_folder / "responses.parquet").reset_index(drop=True)
 
 # Identify users with at least 20 reviews
 min_obs = 20
@@ -248,11 +246,11 @@ plt.xticks(rotation=35, ha="right")
 plt.tight_layout()
 
 # Create directory if it doesn't exist
-modelling_plots_folder = root_folder / "statistical_modelling" / "plots" / "modelling"
+modelling_plots_folder = Path(__file__).parent.parent / "plots" / "modelling"
 os.makedirs(modelling_plots_folder, exist_ok=True)
 plt.savefig(modelling_plots_folder / "accuracy_odds_ratios.png")
 
 # Save model
-models_folder = root_folder / "statistical_modelling" / "models"
+models_folder = Path(__file__).parent.parent / "models"
 os.makedirs(models_folder, exist_ok=True)
 logit_model.save(models_folder / "accuracy_logit.pkl")

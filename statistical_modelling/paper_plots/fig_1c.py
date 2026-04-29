@@ -13,8 +13,8 @@ for font in fm.findSystemFonts(fontpaths=FONT_DIR):
 plt.rcParams["font.family"] = "CMU Serif"
 plt.rcParams["axes.unicode_minus"] = False
 
-data_folder = Path(__file__).parent.parent.parent / "data"
-cross_agreement_df = pd.read_parquet(data_folder / "cross_agreement.parquet")
+results_folder = Path(__file__).parent.parent / "results"
+cross_agreement_df = pd.read_parquet(results_folder / "cross_agreement.parquet")
 
 value_functions = cross_agreement_df.columns.tolist()
 cross_agreement = cross_agreement_df.values

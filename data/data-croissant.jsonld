@@ -1,0 +1,1308 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "equivalentProperty": "cr:equivalentProperty",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "samplingRate": "cr:samplingRate",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "data",
+  "description": "Experimental results of \"Rethinking XAI Evaluation: A Human-Centered Audit of Shapley Benchmarks in High-Stakes Settings\".",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "Dataset Creator. (2026). data Dataset. Generated with automated type inference.",
+  "creator": {
+    "@type": "sc:Person",
+    "name": "Anonymous authors"
+  },
+  "datePublished": "2026-04-29T11:53:07.156997",
+  "license": "Apache",
+  "version": "1.0.0",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "file_0",
+      "name": "responses.jsonl",
+      "contentSize": "5538579",
+      "contentUrl": "responses.jsonl",
+      "encodingFormat": "application/jsonl",
+      "sha256": "c5dfc3e90bc9d1f3c757641aa03bf2b5e9f5a034077b89fbbb7e934b5e30a860"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "responses.jsonl",
+      "name": "responses.jsonl",
+      "description": "Records from responses.jsonl (3735 rows)",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "responses.jsonl/analyst_profile",
+          "name": "analyst_profile",
+          "description": "Column 'analyst_profile'",
+          "source": {
+            "fileObject": {
+              "@id": "file_0"
+            },
+            "extract": {
+              "column": "analyst_profile"
+            }
+          },
+          "subField": [
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/analyst_profile/domain_knowledge",
+              "name": "domain_knowledge",
+              "description": "Field 'domain_knowledge'",
+              "dataType": "sc:Text",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "analyst_profile/domain_knowledge"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/analyst_profile/ml_understanding",
+              "name": "ml_understanding",
+              "description": "Field 'ml_understanding'",
+              "dataType": "sc:Text",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "analyst_profile/ml_understanding"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/analyst_profile/shapley_understanding",
+              "name": "shapley_understanding",
+              "description": "Field 'shapley_understanding'",
+              "dataType": "sc:Text",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "analyst_profile/shapley_understanding"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/analyst_profile/uuid",
+              "name": "uuid",
+              "description": "Field 'uuid'",
+              "dataType": "sc:Text",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "analyst_profile/uuid"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "responses.jsonl/case",
+          "name": "case",
+          "description": "Column 'case'",
+          "source": {
+            "fileObject": {
+              "@id": "file_0"
+            },
+            "extract": {
+              "column": "case"
+            }
+          },
+          "subField": [
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/case/baseline",
+              "name": "baseline",
+              "description": "Field 'baseline'",
+              "dataType": "cr:Float64",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "case/baseline"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/case/categorical_feature_attributions",
+              "name": "categorical_feature_attributions",
+              "description": "Field 'categorical_feature_attributions'",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "case/categorical_feature_attributions"
+                }
+              },
+              "subField": [
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Account_Status",
+                  "name": "Account Status",
+                  "description": "Field 'Account Status'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Account Status"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Class_of_Worker",
+                  "name": "Class of Worker",
+                  "description": "Field 'Class of Worker'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Class of Worker"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Credit_History",
+                  "name": "Credit History",
+                  "description": "Field 'Credit History'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Credit History"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Education",
+                  "name": "Education",
+                  "description": "Field 'Education'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Education"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Employed_Since",
+                  "name": "Employed Since",
+                  "description": "Field 'Employed Since'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Employed Since"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Foreign_Worker",
+                  "name": "Foreign Worker",
+                  "description": "Field 'Foreign Worker'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Foreign Worker"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Housing",
+                  "name": "Housing",
+                  "description": "Field 'Housing'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Housing"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Job",
+                  "name": "Job",
+                  "description": "Field 'Job'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Job"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Marital_Status",
+                  "name": "Marital Status",
+                  "description": "Field 'Marital Status'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Marital Status"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Occupation_Code",
+                  "name": "Occupation Code",
+                  "description": "Field 'Occupation Code'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Occupation Code"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Other_Debtors_Guarantors",
+                  "name": "Other Debtors/Guarantors",
+                  "description": "Field 'Other Debtors/Guarantors'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Other Debtors/Guarantors"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Other_Installment_Plans",
+                  "name": "Other Installment Plans",
+                  "description": "Field 'Other Installment Plans'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Other Installment Plans"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Personal_Status_and_Sex",
+                  "name": "Personal Status and Sex",
+                  "description": "Field 'Personal Status and Sex'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Personal Status and Sex"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Place_of_Birth_Code",
+                  "name": "Place of Birth Code",
+                  "description": "Field 'Place of Birth Code'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Place of Birth Code"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Property",
+                  "name": "Property",
+                  "description": "Field 'Property'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Property"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Purpose",
+                  "name": "Purpose",
+                  "description": "Field 'Purpose'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Purpose"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Race",
+                  "name": "Race",
+                  "description": "Field 'Race'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Race"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Relationship",
+                  "name": "Relationship",
+                  "description": "Field 'Relationship'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Relationship"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Savings_Account",
+                  "name": "Savings Account",
+                  "description": "Field 'Savings Account'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Savings Account"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Sex",
+                  "name": "Sex",
+                  "description": "Field 'Sex'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Sex"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/categorical_feature_attributions/Telephone",
+                  "name": "Telephone",
+                  "description": "Field 'Telephone'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/categorical_feature_attributions/Telephone"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/case/dataset_id",
+              "name": "dataset_id",
+              "description": "Field 'dataset_id'",
+              "dataType": "sc:Text",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "case/dataset_id"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/case/explainer_id",
+              "name": "explainer_id",
+              "description": "Field 'explainer_id'",
+              "dataType": "sc:Text",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "case/explainer_id"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/case/instance_id",
+              "name": "instance_id",
+              "description": "Field 'instance_id'",
+              "dataType": "sc:Text",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "case/instance_id"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/case/model_id",
+              "name": "model_id",
+              "description": "Field 'model_id'",
+              "dataType": "sc:Text",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "case/model_id"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/case/model_score",
+              "name": "model_score",
+              "description": "Field 'model_score'",
+              "dataType": "cr:Float64",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "case/model_score"
+                }
+              }
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/case/numerical_feature_attributions",
+              "name": "numerical_feature_attributions",
+              "description": "Field 'numerical_feature_attributions'",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "case/numerical_feature_attributions"
+                }
+              },
+              "subField": [
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Age",
+                  "name": "Age",
+                  "description": "Field 'Age'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Age"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Age__years_",
+                  "name": "Age (years)",
+                  "description": "Field 'Age (years)'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Age (years)"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Average_duration_of_resolution",
+                  "name": "Average duration of resolution",
+                  "description": "Field 'Average duration of resolution'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Average duration of resolution"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/BS",
+                  "name": "BS",
+                  "description": "Field 'BS'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/BS"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/BodyTemp",
+                  "name": "BodyTemp",
+                  "description": "Field 'BodyTemp'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/BodyTemp"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Credit_Amount",
+                  "name": "Credit Amount",
+                  "description": "Field 'Credit Amount'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Credit Amount"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/DiastolicBP",
+                  "name": "DiastolicBP",
+                  "description": "Field 'DiastolicBP'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/DiastolicBP"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Duration__months_",
+                  "name": "Duration (months)",
+                  "description": "Field 'Duration (months)'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Duration (months)"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Estimate_of_risk",
+                  "name": "Estimate of risk",
+                  "description": "Field 'Estimate of risk'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Estimate of risk"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/HeartRate",
+                  "name": "HeartRate",
+                  "description": "Field 'HeartRate'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/HeartRate"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Installment_Rate",
+                  "name": "Installment Rate",
+                  "description": "Field 'Installment Rate'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Installment Rate"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Maximum_illegal_trades_over_last_year",
+                  "name": "Maximum illegal trades over last year",
+                  "description": "Field 'Maximum illegal trades over last year'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Maximum illegal trades over last year"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Maximum_number_of_illegal_trades",
+                  "name": "Maximum number of illegal trades",
+                  "description": "Field 'Maximum number of illegal trades'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Maximum number of illegal trades"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Months_since_first_trade",
+                  "name": "Months since first trade",
+                  "description": "Field 'Months since first trade'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Months since first trade"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Months_since_last_inquiry_excluding_recent",
+                  "name": "Months since last inquiry excluding recent",
+                  "description": "Field 'Months since last inquiry excluding recent'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Months since last inquiry excluding recent"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Months_since_last_trade",
+                  "name": "Months since last trade",
+                  "description": "Field 'Months since last trade'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Months since last trade"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Net_fraction_of_installment_burden",
+                  "name": "Net fraction of installment burden",
+                  "description": "Field 'Net fraction of installment burden'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Net fraction of installment burden"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Net_fraction_of_revolving_burden",
+                  "name": "Net fraction of revolving burden",
+                  "description": "Field 'Net fraction of revolving burden'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Net fraction of revolving burden"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_Credits",
+                  "name": "Number of Credits",
+                  "description": "Field 'Number of Credits'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of Credits"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_Dependents",
+                  "name": "Number of Dependents",
+                  "description": "Field 'Number of Dependents'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of Dependents"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_banks_with_high_ratio",
+                  "name": "Number of banks with high ratio",
+                  "description": "Field 'Number of banks with high ratio'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of banks with high ratio"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_inquiries_in_last_6_months",
+                  "name": "Number of inquiries in last 6 months",
+                  "description": "Field 'Number of inquiries in last 6 months'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of inquiries in last 6 months"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_inquiries_in_last_6_months_excluding_recent",
+                  "name": "Number of inquiries in last 6 months excluding recent",
+                  "description": "Field 'Number of inquiries in last 6 months excluding recent'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of inquiries in last 6 months excluding recent"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_installment_trades_with_balance",
+                  "name": "Number of installment trades with balance",
+                  "description": "Field 'Number of installment trades with balance'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of installment trades with balance"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_revolving_trades_with_balance",
+                  "name": "Number of revolving trades with balance",
+                  "description": "Field 'Number of revolving trades with balance'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of revolving trades with balance"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_satisfactory_trades",
+                  "name": "Number of satisfactory trades",
+                  "description": "Field 'Number of satisfactory trades'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of satisfactory trades"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_trades_initiated_in_last_year",
+                  "name": "Number of trades initiated in last year",
+                  "description": "Field 'Number of trades initiated in last year'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of trades initiated in last year"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_trades_insolvent_for__60_days",
+                  "name": "Number of trades insolvent for >60 days",
+                  "description": "Field 'Number of trades insolvent for >60 days'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of trades insolvent for >60 days"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Number_of_trades_insolvent_for__90_days",
+                  "name": "Number of trades insolvent for >90 days",
+                  "description": "Field 'Number of trades insolvent for >90 days'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Number of trades insolvent for >90 days"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Percentage_of_installment_trades",
+                  "name": "Percentage of installment trades",
+                  "description": "Field 'Percentage of installment trades'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Percentage of installment trades"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Percentage_of_legal_trades",
+                  "name": "Percentage of legal trades",
+                  "description": "Field 'Percentage of legal trades'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Percentage of legal trades"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Percentage_of_trades_with_balance",
+                  "name": "Percentage of trades with balance",
+                  "description": "Field 'Percentage of trades with balance'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Percentage of trades with balance"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Present_Residence_Since",
+                  "name": "Present Residence Since",
+                  "description": "Field 'Present Residence Since'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Present Residence Since"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/SystolicBP",
+                  "name": "SystolicBP",
+                  "description": "Field 'SystolicBP'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/SystolicBP"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Total_number_of_trades",
+                  "name": "Total number of trades",
+                  "description": "Field 'Total number of trades'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Total number of trades"
+                    }
+                  }
+                },
+                {
+                  "@type": "cr:Field",
+                  "@id": "responses.jsonl/case/numerical_feature_attributions/Work_Hours_per_week",
+                  "name": "Work Hours per week",
+                  "description": "Field 'Work Hours per week'",
+                  "dataType": "cr:Float64",
+                  "source": {
+                    "fileObject": {
+                      "@id": "file_0"
+                    },
+                    "extract": {
+                      "column": "case/numerical_feature_attributions/Work Hours per week"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "cr:Field",
+              "@id": "responses.jsonl/case/true_outcome",
+              "name": "true_outcome",
+              "description": "Field 'true_outcome'",
+              "dataType": "cr:Int64",
+              "source": {
+                "fileObject": {
+                  "@id": "file_0"
+                },
+                "extract": {
+                  "column": "case/true_outcome"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "responses.jsonl/case_counter",
+          "name": "case_counter",
+          "description": "Column 'case_counter'",
+          "dataType": "cr:Int64",
+          "source": {
+            "fileObject": {
+              "@id": "file_0"
+            },
+            "extract": {
+              "column": "case_counter"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "responses.jsonl/clarity",
+          "name": "clarity",
+          "description": "Column 'clarity'",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "file_0"
+            },
+            "extract": {
+              "column": "clarity"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "responses.jsonl/confidence",
+          "name": "confidence",
+          "description": "Column 'confidence'",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "file_0"
+            },
+            "extract": {
+              "column": "confidence"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "responses.jsonl/decision",
+          "name": "decision",
+          "description": "Column 'decision'",
+          "dataType": "cr:Int64",
+          "source": {
+            "fileObject": {
+              "@id": "file_0"
+            },
+            "extract": {
+              "column": "decision"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "responses.jsonl/timestamp_end",
+          "name": "timestamp_end",
+          "description": "Column 'timestamp_end'",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "file_0"
+            },
+            "extract": {
+              "column": "timestamp_end"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "responses.jsonl/timestamp_start",
+          "name": "timestamp_start",
+          "description": "Column 'timestamp_start'",
+          "dataType": "sc:DateTime",
+          "source": {
+            "fileObject": {
+              "@id": "file_0"
+            },
+            "extract": {
+              "column": "timestamp_start"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "responses.jsonl/user",
+          "name": "user",
+          "description": "Column 'user'",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "file_0"
+            },
+            "extract": {
+              "column": "user"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "rai:dataLimitations": "This data was obtained in the context of benchmarking of SHAP formulations for risk detection tabular data. This experimental data is not intended to generalize to other formats (image, text), and to obtain information about long time exposure to explanations.",
+  "rai:dataBiases": "To our knowledge, the data does not present any observable bias.",
+  "rai:personalSensitiveInformation": "The data does not contain any sensitive information.",
+  "rai:dataUseCases": "This data is the observed results of an experiment on SHAP explanations and variants.",
+  "rai:dataSocialImpact": "The intended use of this data is for the analysis of the experiments. It should not be used to extend any conclusions, for example, to other data types.",
+  "rai:hasSyntheticData": false,
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "https://github.com/socialfoundations/folktables",
+      "prov:label": "FolkTables",
+      "sc:license": "MIT"
+    },
+    {
+      "@id": "https://archive.ics.uci.edu/dataset/863/maternal+health+risk",
+      "prov:label": "Maternity Health Risk",
+      "sc:license": "CC 4.0"
+    },
+    {
+      "@id": "https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data",
+      "prov:label": "German Credit Data",
+      "sc:license": "CC 4.0"
+    },
+    {
+      "@id": "https://huggingface.co/datasets/mstz/heloc",
+      "prov:label": "HELOC",
+      "sc:license": "CC"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@type": "prov:Activity",
+      "prov:type": "Annotation",
+      "prov:label": "Risk classification",
+      "prov:description": "A set of analysts reviewed Risk cases of different datasets, and were exposed to a variant of an explanation. The task was to determine the label of each instance."
+    }
+  ],
+  "url": "https://anonymous.4open.science/r/SHAP-Value-Function-Evaluation-16B4/data"
+}

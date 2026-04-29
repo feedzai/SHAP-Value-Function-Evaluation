@@ -39,8 +39,12 @@ clarity_mid_point = np.exp(
     (np.log(clarity_lower_bounds) + np.log(clarity_upper_bounds)) / 2
 )
 
-confidence_lower_bounds = np.array([np.exp(confidence_cis.loc[m, 0]) for m in METRIC_COLUMNS])
-confidence_upper_bounds = np.array([np.exp(confidence_cis.loc[m, 1]) for m in METRIC_COLUMNS])
+confidence_lower_bounds = np.array(
+    [np.exp(confidence_cis.loc[m, 0]) for m in METRIC_COLUMNS]
+)
+confidence_upper_bounds = np.array(
+    [np.exp(confidence_cis.loc[m, 1]) for m in METRIC_COLUMNS]
+)
 confidence_mid_point = np.exp(
     (np.log(confidence_lower_bounds) + np.log(confidence_upper_bounds)) / 2
 )
@@ -157,9 +161,7 @@ ax.text(
     zorder=10,
 )
 
-plt.title(
-    "Quantitative vs Qualitative Metrics", fontsize=ft, fontweight="bold", pad=15
-)
+plt.title("Quantitative vs Qualitative Metrics", fontsize=ft, fontweight="bold", pad=15)
 plt.tight_layout()
 
 plots_folder = Path(__file__).parent.parent / "plots" / "paper"

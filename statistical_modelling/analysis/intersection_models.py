@@ -27,10 +27,8 @@ from statsmodels.miscmodels.ordinal_model import OrderedModel
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 # Load data
-root_folder = Path(__file__).parent.parent.parent
-data = pd.read_parquet(root_folder / "data" / "responses.parquet").reset_index(
-    drop=True
-)
+results_folder = Path(__file__).parent.parent / "results"
+data = pd.read_parquet(results_folder / "responses.parquet").reset_index(drop=True)
 
 # Remove cases without an explainer (cannot compute metrics)
 data = data[~data["explanation"].isnull()]
@@ -48,7 +46,7 @@ valid_users = user_counts[user_counts >= min_obs].index
 data = data[data["user"].isin(valid_users)].copy().reset_index()
 
 # Load per-instance quantitative metrics
-metrics = pd.read_parquet(root_folder / "data" / "per_instance_results.parquet")
+metrics = pd.read_parquet(results_folder / "per_instance_results.parquet")
 metrics = metrics.rename(
     columns={"Unnamed: 0": "instance_id", "explanation_method": "explanation"}
 )
@@ -223,7 +221,7 @@ plt.xlabel("", fontsize=14)
 plt.xticks(rotation=35, ha="right")
 plt.tight_layout()
 
-modelling_plots_folder = root_folder / "statistical_modelling" / "plots" / "modelling"
+modelling_plots_folder = Path(__file__).parent.parent / "plots" / "modelling"
 os.makedirs(modelling_plots_folder, exist_ok=True)
 plt.savefig(modelling_plots_folder / "intersection_clarity_odds_ratios.png")
 
@@ -316,7 +314,7 @@ plt.savefig(modelling_plots_folder / "intersection_confidence_odds_ratios.png")
 
 # === Save models ===
 
-models_folder = root_folder / "statistical_modelling" / "models"
+models_folder = Path(__file__).parent.parent / "models"
 os.makedirs(models_folder, exist_ok=True)
 logit_clarity.save(models_folder / "intersection_clarity_logit.pkl")
 mod_confidence.save(models_folder / "intersection_confidence_orderedlogit.pkl")
