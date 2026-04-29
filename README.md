@@ -6,6 +6,8 @@ A research project studying how different Shapley value function formulations af
 2. **Dashboard** — A Streamlit front-end for an A/B testing user study where analysts review risk cases with different Shapley explanations.
 3. **Statistical Modelling** — Regression analysis of user study results, measuring the effect of explainer type on accuracy, confidence, clarity, and response time.
 
+We further include the release of a dataset consisting of 3,735 granular human-AI interaction measurements to support the development of behaviorally-grounded XAI benchmarks. The dataset, alongside its croissant metadata file, can be found in the `data` folder.
+
 ## Installation
 
 Requires Python 3.10+ and [uv](https://docs.astral.sh/uv/getting-started/installation/).
@@ -72,7 +74,8 @@ See [`statistical_modelling/README.md`](statistical_modelling/README.md) for the
 ```
 ├── pyproject.toml                  # Project metadata and dependencies
 ├── data/
-│   └── responses.parquet           # A/B test response data
+│   └── responses.jsonl             # A/B test response data
+│   └── data-croissant.jsonld       # Croissant metadata file
 ├── benchmark/                      # Amortized SHAP explainer training and evaluation
 ├── ui/dashboard/                   # Streamlit A/B testing dashboard
 └── statistical_modelling/          # Regression analysis of user study results

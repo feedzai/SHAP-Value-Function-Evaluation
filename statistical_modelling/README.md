@@ -54,12 +54,22 @@ The study compares 8 Shapley explainer configurations against a no-explainer bas
 statistical_modelling/
 ├── analysis/
 │   ├── eda.py                        # Exploratory data analysis and plots
+│   ├── intersection_models.py        # Interaction/intersection regression models
 │   ├── modelling_accuracy.py         # Logistic regression on analyst accuracy
-│   ├── modelling_confidence.py       # Ordered logit on decision confidence
 │   ├── modelling_clarity.py          # Logistic regression on explanation clarity
+│   ├── modelling_confidence.py       # Ordered logit on decision confidence
 │   └── modelling_response_times.py   # Quantile regression on decision time
-└── plots/
-    ├── eda/                          # EDA output plots
-    └── modelling/                    # Regression result plots
+├── models/                           # Serialised fitted model objects (created by the analysis scripts)
+├── paper_plots/
+│   ├── fig_1a.py                     # Paper figure 1a generation
+│   ├── fig_1b.py                     # Paper figure 1b generation
+│   ├── fig_1c.py                     # Paper figure 1c generation
+│   ├── fig_3.py                      # Paper figure 3 generation
+│   └── fig_4.py                      # Paper figure 4 generation
+├── plots/
+│   ├── eda/                          # EDA output plots
+│   ├── modelling/                    # Regression result plots
+│   └── paper/                        # Publication-ready figures (PDF)
+└── results/                          # Aggregated results and metrics from the benchmark experiments, as well as a parquet version of the human-AI interaction dataset
 ```
 
