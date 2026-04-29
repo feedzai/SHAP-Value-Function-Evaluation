@@ -1,0 +1,31 @@
+[project]
+name = "shap-value-function-benchmark"
+version = "0.1.0"
+description = "Benchmark framework for amortized SHAP value explainers, with a Streamlit dashboard for A/B testing and statistical analysis of user study results."
+requires-python = ">=3.10"
+dependencies = [
+    "altair",
+    "dice-ml",
+    "joblib",
+    "kagglehub",
+    "lightgbm",
+    "matplotlib",
+    "numpy",
+    "optuna",
+    "pandas",
+    "pyarrow",
+    "pyyaml",
+    "requests",
+    "scikit-learn",
+    "scipy",
+    "seaborn",
+    "shap",
+    "statsmodels",
+    "streamlit",
+    "streamlit-option-menu",
+    "torch",
+    "ucimlrepo",
+]
+
+[tool.setuptools.packages.find]
+include = ["benchmark*", "ui*", "statistical_modelling*"]

@@ -1,0 +1,10 @@
+__pycache__/
+benchmark/cache/
+benchmark/results/
+lsyncd.conf
+lsyncd.exclude
+statistical_modelling/plots/
+statistical_modelling/models/
+.venv
+
+/fonts

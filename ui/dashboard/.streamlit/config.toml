@@ -1,0 +1,7 @@
+[theme]
+# Primary color is used for buttons, metrics, and selections
+primaryColor="#0e61eeff"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F2F6"
+textColor="#212529"
+font="sans serif"
