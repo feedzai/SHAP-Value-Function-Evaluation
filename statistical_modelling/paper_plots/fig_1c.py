@@ -30,7 +30,7 @@ vf_order = [
     "baseline_zero",
 ]
 
-ft = 16
+ft = 18
 
 reorder_indices = []
 reordered_value_functions = []
@@ -56,7 +56,7 @@ vf_names = {
 }
 vf_labels = [vf_names.get(vf, vf) for vf in value_functions]
 
-fig, ax = plt.subplots(figsize=(5.5, 5))
+fig, ax = plt.subplots(figsize=(5.4, 5))
 
 # Mask upper triangle (symmetric matrix: show only lower half)
 mask = np.triu(np.ones_like(cross_agreement, dtype=bool), k=1)
@@ -94,7 +94,7 @@ ax.spines["left"].set_visible(True)
 ax.spines["bottom"].set_visible(True)
 
 plt.title(
-    "Cross Agreement Between Formulations", fontsize=ft, fontweight="bold", pad=20
+    "Cross Agreement Between Formulations", fontsize=ft, fontweight="bold", pad=25
 )
 
 plots_folder = Path(__file__).parent.parent / "plots" / "paper"
@@ -102,7 +102,7 @@ os.makedirs(plots_folder, exist_ok=True)
 plt.savefig(
     plots_folder / "fig_1c.pdf",
     bbox_inches="tight",
-    pad_inches=0.02,
+    pad_inches=0,
     dpi=300,
 )
 plt.close(fig)

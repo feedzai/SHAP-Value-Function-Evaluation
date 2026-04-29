@@ -148,6 +148,8 @@ colors = [group_colors[explanation_group[name]] for name in plot_order]
 
 y_positions = np.arange(len(plot_order))[::-1]
 
+ft = 14
+
 
 def plot_ci(ax, lower, upper, mid, title):
     for idx in range(len(plot_order)):
@@ -168,16 +170,16 @@ def plot_ci(ax, lower, upper, mid, title):
         )
     ax.axvline(x=1.0, color="black", linestyle="--", linewidth=0.5, alpha=0.5)
     ax.set_yticks(y_positions)
-    ax.set_yticklabels(plot_order, fontsize=12)
+    ax.set_yticklabels(plot_order, fontsize=ft)
     ax.set_xscale("log")
     ax.set_xticks([0.5, 1.0, 1.8])
-    ax.set_xticklabels(["0.5", "1.0", "1.8"])
+    ax.set_xticklabels(["0.5", "1.0", "1.8"], fontsize=ft)
     ax.minorticks_off()
-    ax.set_title(title, fontsize=12, fontweight="normal", pad=4)
+    ax.set_title(title, fontsize=ft, fontweight="normal", pad=4)
     ax.grid(True, axis="x", alpha=0.3, linestyle="--", linewidth=0.5)
 
 
-fig, axes = plt.subplots(2, 2, figsize=(5.0, 4.6), sharex=True)
+fig, axes = plt.subplots(2, 2, figsize=(5, 5), sharex=True)
 
 plot_ci(
     axes[0, 0],
@@ -214,6 +216,9 @@ plot_ci(
 for ax in axes[:, 1]:
     ax.tick_params(left=False, labelleft=False)
 
+for ax in axes[1, :]:
+    ax.set_xlabel("something", fontsize=ft, c="white")
+
 plt.tight_layout(rect=[0, 0, 1, 0.9], w_pad=0.2, h_pad=0.2)
 
 left_center = (axes[0, 0].get_position().x0 + axes[0, 0].get_position().x1) / 2
@@ -228,7 +233,7 @@ fig.text(
     "Performance",
     ha="center",
     va="top",
-    fontsize=12,
+    fontsize=ft,
     fontweight="bold",
 )
 fig.text(
@@ -237,11 +242,11 @@ fig.text(
     "Feedback",
     ha="center",
     va="top",
-    fontsize=12,
+    fontsize=ft,
     fontweight="bold",
 )
 
 # Save as pdf
 plots_folder = Path(__file__).parent.parent / "plots" / "paper"
 os.makedirs(plots_folder, exist_ok=True)
-plt.savefig(plots_folder / "fig_3.pdf", bbox_inches="tight", dpi=300)
+plt.savefig(plots_folder / "fig_3a.pdf", bbox_inches="tight", pad_inches=0, dpi=300)

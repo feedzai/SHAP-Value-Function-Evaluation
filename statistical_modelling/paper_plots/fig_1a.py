@@ -20,7 +20,8 @@ metric_values = pd.read_parquet(
 )
 
 value_functions = metric_rankings.index.tolist()
-ft = 16
+ft = 18
+label_ft = 15
 
 value_function_names = {
     "baseline_zero": "Bs. Zero",
@@ -61,11 +62,11 @@ color_group = {
 }
 
 text_position = {
-    "jointmarginal_bg100": (-25, -18),
-    "conditional_bg100": (-20, 7),
+    "jointmarginal_bg100": (0, -18),
+    "conditional_bg100": (-25, 7),
     "marginal_bg100": (5, 5),
-    "uniform_bg100": (-58, -13),
-    "filteredconditional_bg100": (-45, -18),
+    "uniform_bg100": (-65, -15),
+    "filteredconditional_bg100": (-55, -18),
     "counterfactual_bg100": (5, 5),
     "baseline_mean": (5, 5),
     "baseline_zero": (5, 5),
@@ -79,7 +80,7 @@ ax.text(
     0.97,
     "Better",
     transform=ax.transAxes,
-    fontsize=ft - 2,
+    fontsize=label_ft,
     ha="right",
     va="top",
     bbox=dict(
@@ -96,7 +97,7 @@ ax.text(
     0.03,
     "Worse",
     transform=ax.transAxes,
-    fontsize=ft - 2,
+    fontsize=label_ft,
     ha="left",
     va="bottom",
     bbox=dict(
@@ -153,10 +154,12 @@ ax.grid(True, alpha=0.3, linestyle="--", linewidth=0.5)
 ax.legend(
     handles=legend_elements,
     loc="best",
-    fontsize=ft,
+    fontsize=label_ft,
 )
 
-plt.title("Insertion AUC-Sparsity Trade-off", fontsize=ft, fontweight="bold", pad=20)
+plt.title(
+    "Insertion AUC-Sparsity Trade-off", fontsize=ft, fontweight="bold", pad=20, x=0.44
+)
 plt.tight_layout()
 
 plots_folder = Path(__file__).parent.parent / "plots" / "paper"
@@ -164,7 +167,7 @@ os.makedirs(plots_folder, exist_ok=True)
 plt.savefig(
     plots_folder / "fig_1a.pdf",
     bbox_inches="tight",
-    pad_inches=0.05,
+    pad_inches=0,
     dpi=300,
 )
 plt.close(fig)

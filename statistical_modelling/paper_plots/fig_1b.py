@@ -102,14 +102,14 @@ color_group = {
 }
 
 text_position = {
-    "jointmarginal_bg100": (5, 5),
-    "conditional_bg100": (5, -25),
-    "marginal_bg100": (-67, 5),
+    "jointmarginal_bg100": (-76, 5),
+    "conditional_bg100": (5, -26),
+    "marginal_bg100": (-75, 5),
     "uniform_bg100": (5, 5),
     "filteredconditional_bg100": (5, 5),
     "counterfactual_bg100": (-40, 23),
-    "baseline_mean": (-70, -15),
-    "baseline_zero": (5, -15),
+    "baseline_mean": (-77, -16),
+    "baseline_zero": (5, -16),
 }
 
 fig, ax = plt.subplots(figsize=(5, 5))
@@ -117,14 +117,16 @@ fig, ax = plt.subplots(figsize=(5, 5))
 ax.axhline(y=1.0, color="black", linestyle="--", linewidth=0.5, alpha=0.5, zorder=1)
 ax.axvline(x=1.0, color="black", linestyle="--", linewidth=0.5, alpha=0.5, zorder=1)
 
-ft = 16
+ft = 18
+label_ft = 15
+
 # Add text labels
 ax.text(
     0.97,
     0.97,
     "Better",
     transform=ax.transAxes,
-    fontsize=ft - 2,
+    fontsize=label_ft,
     ha="right",
     va="top",
     bbox=dict(
@@ -141,7 +143,7 @@ ax.text(
     0.03,
     "Worse",
     transform=ax.transAxes,
-    fontsize=ft - 2,
+    fontsize=label_ft,
     ha="left",
     va="bottom",
     bbox=dict(
@@ -207,7 +209,9 @@ plt.tick_params(
     labelleft=False,
 )
 
-plt.title("User Confidence-Clarity Trade-off", fontsize=ft, fontweight="bold", pad=20)
+plt.title(
+    "User Confidence-Clarity Trade-off", fontsize=ft, fontweight="bold", pad=20, x=0.45
+)
 plt.tight_layout()
 
 plots_folder = Path(__file__).parent.parent / "plots" / "paper"
@@ -215,6 +219,6 @@ os.makedirs(plots_folder, exist_ok=True)
 plt.savefig(
     plots_folder / "fig_1b.pdf",
     bbox_inches="tight",
-    pad_inches=0.05,
+    pad_inches=0,
     dpi=300,
 )

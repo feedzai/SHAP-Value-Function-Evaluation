@@ -58,18 +58,18 @@ order = [
     "Insertion AUC",
 ]
 
-ft = 12
+ft = 14
 colors = ["#f7a399", "#8b5e34", "#ffe169", "#ef6351", "#208b3a"]
 
 text_position = {
     "Sparsity": (5, 5),
-    "Contrastivity": (-73, 5),
+    "Contrastivity": (-85, 6),
     "Sensitivity": (5, 5),
-    "Deletion AUC": (-78, -12),
+    "Deletion AUC": (-90, -15),
     "Insertion AUC": (5, 5),
 }
 
-fig, ax = plt.subplots(figsize=(5, 4))
+fig, ax = plt.subplots(figsize=(5, 5 * 1.009689922))
 
 ax.axhline(y=1.0, color="black", linestyle="--", linewidth=0.5, alpha=0.5)
 ax.axvline(x=1.0, color="black", linestyle="--", linewidth=0.5, alpha=0.5)
@@ -162,13 +162,13 @@ ax.text(
 )
 
 plt.title("Quantitative vs Qualitative Metrics", fontsize=ft, fontweight="bold", pad=15)
-plt.tight_layout()
+plt.tight_layout(rect=[0, 0, 1, 0.94], w_pad=0.2, h_pad=0.2)
 
 plots_folder = Path(__file__).parent.parent / "plots" / "paper"
 os.makedirs(plots_folder, exist_ok=True)
 plt.savefig(
-    plots_folder / "fig_4.pdf",
+    plots_folder / "fig_3b.pdf",
     bbox_inches="tight",
-    pad_inches=0.05,
+    pad_inches=0,
     dpi=300,
 )
