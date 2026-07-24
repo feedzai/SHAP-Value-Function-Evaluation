@@ -65,6 +65,59 @@ def parse_reference_shap_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def parse_exact_shap_args() -> argparse.Namespace:
+    """
+    Parse command line arguments for the exact (brute-force) SHAP calculation script.
+    """
+    parser = argparse.ArgumentParser(
+        description="Calculate exact (brute-force) Shapley values for a value function"
+    )
+    parser.add_argument(
+        "dataset_name",
+        type=str,
+        help="Name of the dataset to calculate exact SHAP values for",
+        choices=DATASETS,
+    )
+    parser.add_argument(
+        "model_name",
+        type=str,
+        help="Name of the model to use",
+        choices=MODELS,
+    )
+    parser.add_argument(
+        "value_function",
+        type=str,
+        help="Name of the value function whose exact Shapley values to compute",
+        choices=VALUE_FUNCTIONS,
+    )
+    parser.add_argument(
+        "--background_size",
+        type=int,
+        default=DEFAULTS["background_size"],
+        help="Background size (must match the reference SHAP background for comparison)",
+    )
+    parser.add_argument(
+        "--baseline_type",
+        type=str,
+        choices=["zero", "mean"],
+        default=DEFAULTS["baseline_type"],
+        help="Baseline type for the baseline value function (e.g. zero, mean)",
+    )
+    parser.add_argument(
+        "--split",
+        type=str,
+        choices=["val", "test"],
+        default="test",
+        help="Data split to explain (default: test, matching the KernelSHAP comparison)",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Bypass the feasibility guard on the number of features (2**d coalitions)",
+    )
+    return parser.parse_args()
+
+
 def parse_experiment_args() -> argparse.Namespace:
     """
     Parse command line arguments for the amortiser training script.
